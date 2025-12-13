@@ -1,0 +1,58 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - Banking System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 50px; }
+        .container { max-width: 500px; margin: 0 auto; background: white; padding: 30px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #333; margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; color: #555; }
+        input[type="text"], input[type="email"], input[type="password"], textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 3px; }
+        textarea { resize: vertical; }
+        button { width: 100%; padding: 10px; background: #007bff; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #0056b3; }
+        .error { color: red; margin-bottom: 15px; text-align: center; }
+        .link { text-align: center; margin-top: 15px; }
+        .link a { color: #007bff; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Customer Registration</h2>
+        <% String error = (String) request.getAttribute("error"); %>
+        <% if (error != null) { %>
+            <div class="error"><%= error %></div>
+        <% } %>
+        <form action="register" method="post">
+            <div class="form-group">
+                <label>Name *:</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+                <label>Email *:</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label>Password *:</label>
+                <input type="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label>Phone:</label>
+                <input type="text" name="phone">
+            </div>
+            <div class="form-group">
+                <label>Address:</label>
+                <textarea name="address" rows="3"></textarea>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <div class="link">
+            <a href="login.jsp">Already have an account? Login here</a>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,50 +1,144 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Login - Banking System</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bank - Login</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 50px; }
-        .container { max-width: 400px; margin: 0 auto; background: white; padding: 30px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h2 { text-align: center; color: #333; margin-bottom: 20px; }
-        .form-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; color: #555; }
-        input[type="text"], input[type="email"], input[type="password"] { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 3px; }
-        button { width: 100%; padding: 10px; background: #007bff; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 16px; }
-        button:hover { background: #0056b3; }
-        .error { color: red; margin-bottom: 15px; text-align: center; }
-        .success { color: green; margin-bottom: 15px; text-align: center; }
-        .link { text-align: center; margin-top: 15px; }
-        .link a { color: #007bff; text-decoration: none; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h2>Banking System Login</h2>
-        <% String error = (String) request.getAttribute("error"); %>
-        <% if (error != null) { %>
-            <div class="error"><%= error %></div>
-        <% } %>
-        <% String success = (String) request.getAttribute("success"); %>
-        <% if (success != null) { %>
-            <div class="success"><%= success %></div>
-        <% } %>
-        <form action="login" method="post">
-            <div class="form-group">
-                <label>Email:</label>
-                <input type="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label>Password:</label>
-                <input type="password" name="password" required>
-            </div>
-            <button type="submit">Login</button>
-        </form>
-        <div class="link">
-            <a href="register.jsp">Don't have an account? Register here</a>
-        </div>
-    </div>
-</body>
-</html>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: #222;
+      }
+
+      .auth-wrapper {
+        width: 100%;
+        max-width: 400px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        padding: 30px 28px 26px;
+      }
+
+      .auth-header {
+        text-align: center;
+        margin-bottom: 18px;
+      }
+
+      .auth-title {
+        font-size: 1.6rem;
+        margin-bottom: 4px;
+        color: #1e3c72;
+      }
+
+      .auth-subtitle {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .form-group {
+        margin-top: 14px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 0.9rem;
+        color: #444;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 9px 10px;
+        border-radius: 4px;
+        border: 1px solid #ccd2e3;
+        font-size: 0.95rem;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        outline: none;
+        border-color: #2a5298;
+        box-shadow: 0 0 0 2px rgba(42, 82, 152, 0.15);
+      }
+
+      .btn-primary {
+        width: 100%;
+        margin-top: 18px;
+        padding: 10px 0;
+        border-radius: 4px;
+        border: none;
+        background: #2a5298;
+        color: #ffffff;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .btn-primary:hover {
+        background: #23457f;
+      }
+
+      .error {
+        color: #c0392b;
+        margin-top: 10px;
+        font-size: 0.9rem;
+        min-height: 18px;
+        text-align: center;
+      }
+
+      .helper-text {
+        text-align: center;
+        margin-top: 14px;
+        font-size: 0.85rem;
+      }
+
+      .helper-text span {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="auth-wrapper">
+      <div class="auth-header">
+        <div class="auth-title">Welcome</div>
+        <div class="auth-subtitle">Sign in to your account</div>
+      </div>
+
+      <form action="login" method="post">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="text"
+            name="email"
+            required
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" name="password" required />
+        </div>
+
+        <button class="btn-primary" type="submit">Login</button>
+      </form>
+
+      <p class="error">
+        <%= request.getAttribute("error") != null ?
+        request.getAttribute("error") : "" %>
+      </p>
+    </div>
+  </body>
+</html>

@@ -57,7 +57,7 @@
                     </div>
                     <div class="detail-item">
                         <label>Balance</label>
-                        <p style="color: #28a745;">$<%= String.format("%.2f", customer.getBalance()) %></p>
+                        <p style="color: #28a745;">ETP <%= String.format("%.2f", customer.getBalance()) %></p>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                             <tr>
                                 <td><%= new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm").format(t.getCreatedAt()) %></td>
                                 <td><%= t.getTransactionType() %></td>
-                                <td>$<%= String.format("%.2f", t.getAmount()) %></td>
+                                <td>ETP <%= String.format("%.2f", t.getAmount()) %></td>
                                 <td>
                                     <% if ("transfer".equals(t.getTransactionType())) { %>
                                         <% if (customer.getAccountNumber().equals(t.getSenderAccountNumber())) { %>

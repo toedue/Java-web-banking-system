@@ -70,7 +70,7 @@
                                 </td>
                                 <td><%= t.getSenderAccountNumber() != null ? t.getSenderAccountNumber() : "-" %></td>
                                 <td><%= t.getReceiverAccountNumber() != null ? t.getReceiverAccountNumber() : "-" %></td>
-                                <td class="amount positive">$<%= String.format("%.2f", t.getAmount()) %></td>
+                                <td class="amount positive">ETP <%= String.format("%.2f", t.getAmount()) %></td>
                                 <td><%= t.getNote() != null && !t.getNote().isEmpty() ? t.getNote() : "-" %></td>
                             </tr>
                         <% } %>

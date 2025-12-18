@@ -108,7 +108,7 @@
         </div>
 
         <div class="form-group">
-            <label for="amount">Amount (ETP)</label>
+            <label for="amount">Amount (ETB)</label>
             <input id="amount" type="number" name="amount" min="1" step="1" required>
         </div>
 

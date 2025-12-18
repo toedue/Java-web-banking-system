@@ -1,7 +1,9 @@
 c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\dao\TransactionDAO.java
+c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\servlet\AdminViewTransactionsServlet.java
 c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\servlet\UpdateProfileServlet.java
 c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\util\PasswordUtil.java
-c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\simplebank\LoginServlet.java
+c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\servlet\ViewTransactionsServlet.java
+c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\servlet\LoginServlet.java
 c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\model\User.java
 c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\servlet\RegisterServlet.java
 c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\servlet\ViewCustomersServlet.java
@@ -13,14 +15,8 @@ c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\model\Customer.j
 c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\model\Transaction.java
 c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\servlet\EditCustomerServlet.java
 c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\dao\CustomerDAO.java
-c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\simplebank\DashboardServlet.java
-c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\simplebank\SendMoneyServlet.java
-c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\servlet\AdminDashboardServlet.java
-c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\servlet\AdminViewTransactionsServlet.java
-c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\servlet\ViewTransactionsServlet.java
-c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\servlet\LoginServlet.java
 c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\util\DatabaseConnection.java
 c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\servlet\ManageTransactionServlet.java
-c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\simplebank\LogoutServlet.java
 c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\servlet\AddCustomerServlet.java
+c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\servlet\AdminDashboardServlet.java
 c:\Users\Hp\Desktop\Java Project\demo\src\main\java\com\banking\servlet\LogoutServlet.java

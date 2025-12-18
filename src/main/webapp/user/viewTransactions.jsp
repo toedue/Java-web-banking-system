@@ -54,9 +54,9 @@
                                 <td><%= t.getTransactionType() %></td>
                                 <td class="<%= (customer != null && customer.getAccountNumber().equals(t.getSenderAccountNumber())) ? "debit" : "credit" %>">
                                     <% if (customer != null && customer.getAccountNumber().equals(t.getSenderAccountNumber())) { %>
-                                        -ETP <%= String.format("%.2f", t.getAmount()) %>
+                                        -ETB <%= String.format("%.2f", t.getAmount()) %>
                                     <% } else { %>
-                                        +ETP <%= String.format("%.2f", t.getAmount()) %>
+                                        +ETB <%= String.format("%.2f", t.getAmount()) %>
                                     <% } %>
                                 </td>
                                 <td>

@@ -5,10 +5,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-    // Update these database connection details according to your MySQL setup
+    
     private static final String DB_URL = "jdbc:mysql://localhost:3306/banking_system?useSSL=false&serverTimezone=UTC";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "";  // Update with your MySQL password
+    private static final String DB_PASSWORD = "";  
     
     public static Connection getConnection() throws SQLException {
         try {

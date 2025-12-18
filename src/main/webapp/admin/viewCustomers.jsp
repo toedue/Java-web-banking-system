@@ -67,7 +67,7 @@
                                 <td><%= customer.getEmail() %></td>
                                 <td><%= customer.getPhone() != null ? customer.getPhone() : "-" %></td>
                                 <td><%= customer.getAddress() != null ? customer.getAddress() : "-" %></td>
-                                <td>ETP <%= String.format("%.2f", customer.getBalance()) %></td>
+                                <td>ETB <%= String.format("%.2f", customer.getBalance()) %></td>
                                 <td>
                                     <a href="editCustomer?accountNumber=<%= customer.getAccountNumber() %>" class="btn btn-edit">Edit</a>
                                     <form method="post" action="deleteCustomer" style="display: inline;">
